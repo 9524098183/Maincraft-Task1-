@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MainCrafts Internship Task</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#f4f4f4;
+    }
+
+    .container{
+      width:400px;
+      background:white;
+      margin:80px auto;
+      padding:30px;
+      border-radius:10px;
+      box-shadow:0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h1{
+      text-align:center;
+      margin-bottom:10px;
+      color:#333;
+    }
+
+    p{
+      text-align:center;
+      margin-bottom:20px;
+      color:gray;
+    }
+
+    input,
+    textarea{
+      width:100%;
+      padding:12px;
+      margin-top:10px;
+      border:1px solid #ccc;
+      border-radius:5px;
+      font-size:16px;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      margin-top:15px;
+      background:#007bff;
+      color:white;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+      font-size:16px;
+    }
+
+    button:hover{
+      background:#0056b3;
+    }
+
+    #successMessage{
+      text-align:center;
+      color:green;
+      margin-top:15px;
+      font-weight:bold;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>MainCrafts Internship</h1>
+
+    <p>Landing Page + Contact Form</p>
+
+    <form onsubmit="submitForm(event)">
+
+      <input type="text"
+             placeholder="Enter Your Name"
+             required>
+
+      <input type="email"
+             placeholder="Enter Your Email"
+             required>
+
+      <textarea rows="5"
+                placeholder="Enter Your Message"></textarea>
+
+      <button type="submit">
+        Submit
+      </button>
+
+    </form>
+
+    <div id="successMessage"></div>
+
+  </div>
+
+  <script>
+
+    function submitForm(event){
+
+      event.preventDefault();
+
+      document.getElementById("successMessage").innerHTML =
+      "Form Submitted Successfully!";
+
+    }
+
+  </script>
+
+</body>
+
+</html>
